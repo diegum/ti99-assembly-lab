@@ -39,5 +39,5 @@ if [ ${STATUS_CODE} -ne 0 ]; then
     exit ${STATUS_CODE}
 fi
 
-echo "Launching: ${MAME_TI99} ${TI99_OPTIONS} -flop1 ./${SOURCE_STEM}.dsk"
+echo "Launching: ${MAME_TI99} ${TI99_OPTIONS} -flop1 ./${DISK_NAME}.dsk"
 /opt/ti99/mame0224/mame64 -cfg_directory "/Users/entertainment/pCloud Drive/ti99_4a/cfg" -inipath "/Users/entertainment/pCloud Drive/ti99_4a/ini" -nvram_directory "/Users/entertainment/pCloud Drive/ti99_4a/nvram" -rompath "/Users/entertainment/pCloud Drive/ti99_4a/roms" -video soft ti99_4a -cart "/Users/entertainment/pCloud Drive/ti99_4a/cart/editor_assembler.rpk" -ioport peb -ioport:peb:slot2 32kmem -ioport:peb:slot8 hfdc -ioport:peb:slot8:hfdc:f1 525dd -ioport:peb:slot8:hfdc:f2 525dd -flop2 "/Users/entertainment/pCloud Drive/v9t9/DISKS/Ed-Assm.Dsk" -flop1 ./${DISK_NAME}.dsk
